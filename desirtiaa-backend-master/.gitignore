@@ -20,5 +20,3 @@ Thumbs.db
 # vscode
 .vscode/
 
-# package lock optional
-package-lock.json
