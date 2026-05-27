@@ -1,11 +1,9 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import { createClient } from '@supabase/supabase-js';
 
-import { createClient } from '@supabase/supabase-js'
+// هدول المفاتيح مأخوذة من صور الإعدادات اللي بعتيها حالاً
+const supabaseUrl = 'https://teaejvcyranohzaupyye.supabase.co';
+const supabaseKey = 'sb_publishable_yiCN9iz2DHd-U8ba5BXmwQ_pVXZPy0O';
 
-const supabaseUrl = process.env.SUPABASE_URL
-const supabaseKey = process.env.SUPABASE_KEY
+export const supabase = createClient(supabaseUrl, supabaseKey);
 
-const supabase = createClient(supabaseUrl, supabaseKey)
-
-console.log(supabase)
+console.log("Supabase Client Initialized with New Keys!");
